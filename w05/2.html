@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>CSS</title>
+<style>
+    a {
+      color: black;
+    }
+    .saw {
+      color: rgb(143, 46, 46);
+    }
+    .active {
+      color: red;
+    }
+    h1 {
+    font-size: 55px;
+    text-align: center;
+    border-bottom: 2px solid rgb(143, 46, 46);
+    margin: 0px;
+    padding: 10px;
+    }
+
+    ol {
+    width: 100px;
+    margin: 0px;
+    padding: 20px;
+    border-right: 2px solid rgb(143, 46, 46);
+    }
+
+    body {
+    margin: 0px;
+    }
+    div {
+      border: 5px solid rgb(143, 46, 46);
+    }
+    #grid {
+      border: 10px solid white;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
+    @media(max-width: 800px){
+        #grid {
+        display: block;
+        }
+        #grid ol {
+        border-right:none;
+    }
+    h1{
+        border-bottom:none;
+    }
+    
+    }
+    
+</style>
+</head>
+
+<body>
+
+  <input id="night_day" type="button" value="night" onclick="
+  var target = document.querySelector('body');
+
+  if(this.value == 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while (i < alist.length) {
+      alist[i].style.color = 'powderblue';
+      i = i + 1;
+    }    
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while (i < alist.length) {
+      alist[i].style.color = 'blue';
+      i = i + 1;
+    }  
+  }  
+  ">  
+
+  <h1><a href="index.html">WEB</a></h1>
+  <div id="grid">
+    <div>
+<ol>
+    <li><a href="1.html" class="saw">HTML</a></li>
+    <li><a href="2.html" class="saw"  id="active">CSS</a></li>
+    <li><a href="3.html" class="saw">JavaScript</a></li>
+    <li><a href="4.html" class="saw">React</a></li>
+</ol>
+</div>
+<div>
+    
+    <h1>CSS</h1>
+    <hr>
+    <div style="text-align : center;">
+    <img src="css.jpg" alt="html.img" width="50%"><br>
+    </div>
+
+    <br style="margin-top:40px" >종속형 시트 또는 캐스케이딩 스타일 시트(영어: Cascading Style Sheet)는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어
+    <br>(영어: Style sheet language 스타일 시트 랭귀지[*])로, HTML과 XHTML에 주로 쓰이며, XML에서도 사용할 수 있다. 
+    <br>W3C의 표준이고, 레이아웃과 스타일을 정의할 때의 자유도가 높다. 기본 파일명은 style.css이다.
+
+</div>
+</div>
+</body>
+</html>

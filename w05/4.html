@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>JavaScript</title>
+<style>
+    a {
+      color: black;
+    }
+    .saw {
+      color: rgb(143, 46, 46);
+    }
+    .active {
+      color: red;
+    }
+    h1 {
+    font-size: 55px;
+    text-align: center;
+    border-bottom: 2px solid rgb(143, 46, 46);
+    margin: 0px;
+    padding: 10px;
+    }
+
+    ol {
+    width: 100px;
+    margin: 0px;
+    padding: 20px;
+    border-right: 2px solid rgb(143, 46, 46);
+    }
+
+    body {
+    margin: 0px;
+    }
+    div {
+      border: 5px solid rgb(143, 46, 46);
+    }
+    #grid {
+      border: 10px solid white;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
+    @media(max-width: 800px){
+        #grid {
+        display: block;
+        }
+        #grid ol {
+        border-right:none;
+    }
+    h1{
+        border-bottom:none;
+    }
+    
+    }
+    
+</style>
+</head>
+
+<body>
+
+  <input id="night_day" type="button" value="night" onclick="
+  var target = document.querySelector('body');
+
+  if(this.value == 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while (i < alist.length) {
+      alist[i].style.color = 'powderblue';
+      i = i + 1;
+    }    
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while (i < alist.length) {
+      alist[i].style.color = 'blue';
+      i = i + 1;
+    }  
+  }  
+  ">  
+
+  <h1><a href="index.html">WEB</a></h1>
+  <div id="grid">
+    <div>
+<ol>
+    <li><a href="1.html" class="saw">HTML</a></li>
+    <li><a href="2.html" class="saw">CSS</a></li>
+    <li><a href="3.html" class="saw" id="active">JavaScript</a></li>
+    <li><a href="4.html" class="saw">React</a></li>
+</ol>
+</div>
+<div>
+    
+    <h1>JavaScript</h1>
+    <hr>
+    <div style="text-align : center;">
+    <img src="code.jpg" alt="html.img" width="50%"><br>
+    </div>
+
+    <br style="margin-top:40px">자바스크립트(영어: JavaScript)는 객체 기반의 스크립트 프로그래밍 언어이다. 
+    <br>이 언어는 웹 브라우저 내에서 주로 사용되며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 
+    <br>또한 Node.js와 같은 런타임 환경과 같이 서버 프로그래밍에도 사용되고 있다.
+
+</div>
+</div>
+</body>
+</html>
